@@ -1,79 +1,79 @@
 /* ============================================
-   HARMONIE SANTÉ — Main JavaScript
+   HARMONIE SANTÉ — V2 Main JavaScript
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Preloader
-  const preloader = document.getElementById('preloader');
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-      preloader.classList.add('loaded');
-    }, 800);
-  });
 
-  // Fallback: hide preloader after 3 seconds
-  setTimeout(() => {
-    preloader.classList.add('loaded');
-  }, 3000);
-
-  // Header scroll effect
-  const header = document.getElementById('header');
-  const handleScroll = () => {
-    if (window.scrollY > 80) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
-  };
-  window.addEventListener('scroll', handleScroll, { passive: true });
-  handleScroll();
-
-  // Mobile navigation toggle
-  const navToggle = document.querySelector('.nav-toggle');
-  const navLinks = document.querySelector('.nav-links');
-
-  if (navToggle) {
-    navToggle.addEventListener('click', () => {
-      navToggle.classList.toggle('active');
-      navLinks.classList.toggle('active');
-      document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+  // Cursor glow effect
+  const cursorGlow = document.getElementById('cursorGlow');
+  if (cursorGlow && window.matchMedia('(hover: hover)').matches) {
+    document.addEventListener('mousemove', (e) => {
+      cursorGlow.style.transform = `translate(${e.clientX - 150}px, ${e.clientY - 150}px)`;
     });
   }
 
-  // Close mobile menu on link click
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-      navToggle.classList.remove('active');
-      navLinks.classList.remove('active');
-      document.body.style.overflow = '';
-    });
-  });
+  // Header scroll
+  const header = document.getElementById('header');
+  const onScroll = () => {
+    header.classList.toggle('scrolled', window.scrollY > 60);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
 
-  // Smooth scroll for anchor links
+  // Mobile menu
+  const navToggle = document.getElementById('navToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  if (navToggle && mobileMenu) {
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+      document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navToggle.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+
+  // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', (e) => {
       e.preventDefault();
       const target = document.querySelector(anchor.getAttribute('href'));
       if (target) {
-        const headerHeight = header.offsetHeight;
-        const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+        const offset = header.offsetHeight + 10;
         window.scrollTo({
-          top: targetPosition,
+          top: target.getBoundingClientRect().top + window.scrollY - offset,
           behavior: 'smooth'
         });
       }
     });
   });
 
-  // Scroll reveal animations
-  const revealElements = document.querySelectorAll(
-    '.service-card, .diff-item, .testimonial-card, .gallery-item, ' +
-    '.about-content, .about-images, .diff-content, .diff-visual, ' +
-    '.contact-info, .contact-form-wrapper, .cta-box, .section-header'
-  );
+  // Active nav link
+  const sections = document.querySelectorAll('section[id]');
+  const navItems = document.querySelectorAll('.nav-links a');
 
-  revealElements.forEach(el => el.classList.add('reveal'));
+  window.addEventListener('scroll', () => {
+    const scrollPos = window.scrollY + 150;
+    sections.forEach(section => {
+      const top = section.offsetTop;
+      const height = section.offsetHeight;
+      const id = section.getAttribute('id');
+      if (scrollPos >= top && scrollPos < top + height) {
+        navItems.forEach(link => {
+          link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+        });
+      }
+    });
+  }, { passive: true });
 
+  // Reveal on scroll
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -81,51 +81,41 @@ document.addEventListener('DOMContentLoaded', () => {
         revealObserver.unobserve(entry.target);
       }
     });
-  }, {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
-  revealElements.forEach((el, index) => {
-    el.style.transitionDelay = `${(index % 4) * 0.1}s`;
-    revealObserver.observe(el);
-  });
+  document.querySelectorAll('[data-reveal]').forEach(el => revealObserver.observe(el));
 
-  // Active nav link on scroll
-  const sections = document.querySelectorAll('section[id]');
-  const navItems = document.querySelectorAll('.nav-links a');
+  // Counter animation
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const target = parseInt(el.dataset.count);
+        const duration = 2000;
+        const start = performance.now();
 
-  const activateNavLink = () => {
-    const scrollPos = window.scrollY + 200;
+        const animate = (now) => {
+          const progress = Math.min((now - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          el.textContent = Math.floor(eased * target);
+          if (progress < 1) requestAnimationFrame(animate);
+        };
 
-    sections.forEach(section => {
-      const top = section.offsetTop;
-      const height = section.offsetHeight;
-      const id = section.getAttribute('id');
-
-      if (scrollPos >= top && scrollPos < top + height) {
-        navItems.forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === `#${id}`) {
-            link.classList.add('active');
-          }
-        });
+        requestAnimationFrame(animate);
+        counterObserver.unobserve(el);
       }
     });
-  };
+  }, { threshold: 0.5 });
 
-  window.addEventListener('scroll', activateNavLink, { passive: true });
+  document.querySelectorAll('[data-count]').forEach(el => counterObserver.observe(el));
 
-  // Contact form handling
+  // Contact form
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
+      const data = Object.fromEntries(new FormData(contactForm).entries());
 
-      const formData = new FormData(contactForm);
-      const data = Object.fromEntries(formData.entries());
-
-      // WhatsApp message
       const message = `Olá! Gostaria de agendar uma consulta.\n\n` +
         `*Nome:* ${data.name}\n` +
         `*E-mail:* ${data.email}\n` +
@@ -135,22 +125,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const whatsappUrl = `https://wa.me/5500000000000?text=${encodeURIComponent(message)}`;
 
-      // Show success feedback
       const btn = contactForm.querySelector('button[type="submit"]');
-      const originalText = btn.textContent;
-      btn.textContent = 'Redirecionando para WhatsApp...';
+      const original = btn.innerHTML;
+      btn.innerHTML = '<span>Redirecionando...</span>';
       btn.style.background = '#25D366';
-      btn.style.borderColor = '#25D366';
 
       setTimeout(() => {
         window.open(whatsappUrl, '_blank');
-        btn.textContent = 'Mensagem Enviada ✓';
+        btn.innerHTML = '<span>Enviado com sucesso</span>';
         setTimeout(() => {
-          btn.textContent = originalText;
+          btn.innerHTML = original;
           btn.style.background = '';
-          btn.style.borderColor = '';
           contactForm.reset();
-        }, 2000);
+        }, 2500);
       }, 500);
     });
   }
@@ -159,18 +146,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const phoneInput = document.getElementById('phone');
   if (phoneInput) {
     phoneInput.addEventListener('input', (e) => {
-      let value = e.target.value.replace(/\D/g, '');
-      if (value.length > 11) value = value.slice(0, 11);
-
-      if (value.length > 6) {
-        value = `(${value.slice(0, 2)}) ${value.slice(2, 7)}-${value.slice(7)}`;
-      } else if (value.length > 2) {
-        value = `(${value.slice(0, 2)}) ${value.slice(2)}`;
-      } else if (value.length > 0) {
-        value = `(${value}`;
-      }
-
-      e.target.value = value;
+      let v = e.target.value.replace(/\D/g, '').slice(0, 11);
+      if (v.length > 6) v = `(${v.slice(0, 2)}) ${v.slice(2, 7)}-${v.slice(7)}`;
+      else if (v.length > 2) v = `(${v.slice(0, 2)}) ${v.slice(2)}`;
+      else if (v.length > 0) v = `(${v}`;
+      e.target.value = v;
     });
   }
+
 });
