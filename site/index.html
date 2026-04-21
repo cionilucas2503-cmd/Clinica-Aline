@@ -19,7 +19,7 @@
   <header id="header">
     <nav class="navbar">
       <a href="#home" class="logo">
-        <span class="logo-monogram">HS</span>
+        <img src="../Clínica Aline/Marca dágua/Curva (2).png" alt="Harmonie Santé" class="logo-icon">
         <span class="logo-divider"></span>
         <span class="logo-text">Harmonie Santé</span>
       </a>
@@ -56,106 +56,45 @@
 
   <!-- Hero Section -->
   <section id="home" class="hero">
-    <!-- Decorative elements -->
-    <div class="hero-deco">
-      <svg class="hero-circle" viewBox="0 0 600 600" fill="none">
-        <circle cx="300" cy="300" r="298" stroke="rgba(188,155,139,0.12)" stroke-width="0.5"/>
-        <circle cx="300" cy="300" r="240" stroke="rgba(188,155,139,0.08)" stroke-width="0.5"/>
-        <circle cx="300" cy="300" r="180" stroke="rgba(188,155,139,0.06)" stroke-width="0.5"/>
-      </svg>
-      <div class="hero-grain"></div>
-      <div class="hero-gradient-orb hero-orb-1"></div>
-      <div class="hero-gradient-orb hero-orb-2"></div>
+    <img src="../Clínica Aline/Marca dágua/Hero 1.png" alt="" class="hero-bg-img" aria-hidden="true">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content" data-reveal>
+      <div class="hero-tag">
+        <span class="tag-dot"></span>
+        Medicina Integrada & Estética
+      </div>
+      <h1>
+        A ciência da<br>
+        beleza em<br>
+        <em>harmonia</em>
+      </h1>
+      <p class="hero-desc">Protocolos exclusivos que unem tecnologia avançada e olhar clínico personalizado para resultados naturais e sofisticados.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn btn-primary">
+          <span>Agendar Consulta</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#services" class="btn btn-ghost">Explorar Tratamentos</a>
+      </div>
+      <div class="hero-metrics">
+        <div class="metric">
+          <span class="metric-num" data-count="500">0</span><span class="metric-plus">+</span>
+          <span class="metric-label">Pacientes</span>
+        </div>
+        <div class="metric-sep"></div>
+        <div class="metric">
+          <span class="metric-num" data-count="15">0</span><span class="metric-plus">+</span>
+          <span class="metric-label">Procedimentos</span>
+        </div>
+        <div class="metric-sep"></div>
+        <div class="metric">
+          <span class="metric-num" data-count="98">0</span><span class="metric-plus">%</span>
+          <span class="metric-label">Satisfação</span>
+        </div>
+      </div>
     </div>
 
-    <div class="hero-inner">
-      <div class="hero-left">
-        <div class="hero-tag" data-reveal>
-          <span class="tag-dot"></span>
-          Medicina Integrada & Estética
-        </div>
-        <h1 data-reveal>
-          A ciência da<br>
-          beleza em<br>
-          <em>harmonia</em>
-        </h1>
-        <p class="hero-desc" data-reveal>Protocolos exclusivos que unem tecnologia avançada e olhar clínico personalizado para resultados naturais e sofisticados.</p>
-        <div class="hero-btns" data-reveal>
-          <a href="#contact" class="btn btn-primary">
-            <span>Agendar Consulta</span>
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-          <a href="#services" class="btn btn-ghost">Explorar Tratamentos</a>
-        </div>
-        <div class="hero-metrics" data-reveal>
-          <div class="metric">
-            <span class="metric-num" data-count="500">0</span><span class="metric-plus">+</span>
-            <span class="metric-label">Pacientes</span>
-          </div>
-          <div class="metric-sep"></div>
-          <div class="metric">
-            <span class="metric-num" data-count="15">0</span><span class="metric-plus">+</span>
-            <span class="metric-label">Procedimentos</span>
-          </div>
-          <div class="metric-sep"></div>
-          <div class="metric">
-            <span class="metric-num" data-count="98">0</span><span class="metric-plus">%</span>
-            <span class="metric-label">Satisfação</span>
-          </div>
-        </div>
-      </div>
-      <div class="hero-right" data-reveal>
-        <div class="hero-visual">
-          <!-- Abstract face silhouette in CSS/SVG -->
-          <svg class="hero-art" viewBox="0 0 480 600" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="skinGrad" x1="0" y1="0" x2="480" y2="600" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#EBD9BF"/>
-                <stop offset="50%" stop-color="#D4B8AA"/>
-                <stop offset="100%" stop-color="#BC9B8B"/>
-              </linearGradient>
-              <linearGradient id="accentGrad" x1="100" y1="100" x2="400" y2="500" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#F2CF8C" stop-opacity="0.6"/>
-                <stop offset="100%" stop-color="#BC9B8B" stop-opacity="0.3"/>
-              </linearGradient>
-              <clipPath id="faceClip">
-                <path d="M240 40C140 40 80 120 80 200C80 240 70 280 75 320C80 380 100 420 140 460C180 500 210 540 240 560C270 540 300 500 340 460C380 420 400 380 405 320C410 280 400 240 400 200C400 120 340 40 240 40Z"/>
-              </clipPath>
-            </defs>
-            <!-- Background shape -->
-            <ellipse cx="240" cy="310" rx="200" ry="260" fill="url(#skinGrad)" opacity="0.15"/>
-            <!-- Face silhouette -->
-            <path d="M240 40C140 40 80 120 80 200C80 240 70 280 75 320C80 380 100 420 140 460C180 500 210 540 240 560C270 540 300 500 340 460C380 420 400 380 405 320C410 280 400 240 400 200C400 120 340 40 240 40Z" fill="url(#skinGrad)" opacity="0.4"/>
-            <!-- Features - abstract lines -->
-            <path d="M170 230C185 225 210 222 240 222C270 222 295 225 310 230" stroke="#A07E6E" stroke-width="1" opacity="0.5" fill="none"/>
-            <path d="M170 235C185 240 210 243 240 243C270 243 295 240 310 235" stroke="#A07E6E" stroke-width="0.5" opacity="0.3" fill="none"/>
-            <!-- Eyes -->
-            <ellipse cx="195" cy="210" rx="22" ry="8" stroke="#A07E6E" stroke-width="1" fill="none" opacity="0.6"/>
-            <ellipse cx="285" cy="210" rx="22" ry="8" stroke="#A07E6E" stroke-width="1" fill="none" opacity="0.6"/>
-            <circle cx="195" cy="210" r="4" fill="#A07E6E" opacity="0.4"/>
-            <circle cx="285" cy="210" r="4" fill="#A07E6E" opacity="0.4"/>
-            <!-- Nose -->
-            <path d="M235 240V290C232 298 228 302 222 305M245 240V290C248 298 252 302 258 305" stroke="#A07E6E" stroke-width="0.8" opacity="0.4" fill="none" stroke-linecap="round"/>
-            <!-- Lips -->
-            <path d="M210 340C220 332 230 328 240 330C250 328 260 332 270 340" stroke="#BC9B8B" stroke-width="1.2" opacity="0.5" fill="none"/>
-            <path d="M210 340C220 348 230 350 240 348C250 350 260 348 270 340" stroke="#BC9B8B" stroke-width="1" opacity="0.4" fill="none"/>
-            <!-- Decorative golden circles -->
-            <circle cx="380" cy="120" r="40" fill="url(#accentGrad)" opacity="0.4"/>
-            <circle cx="100" cy="450" r="30" fill="url(#accentGrad)" opacity="0.3"/>
-            <circle cx="350" cy="480" r="20" fill="#F2CF8C" opacity="0.2"/>
-            <!-- Decorative lines -->
-            <line x1="60" y1="150" x2="60" y2="450" stroke="#BC9B8B" stroke-width="0.3" opacity="0.3"/>
-            <line x1="420" y1="100" x2="420" y2="500" stroke="#BC9B8B" stroke-width="0.3" opacity="0.3"/>
-            <!-- Flowing curves -->
-            <path d="M50 300C100 250 150 350 200 300C250 250 300 350 350 300C400 250 430 300 450 280" stroke="#F2CF8C" stroke-width="0.8" opacity="0.25" fill="none"/>
-          </svg>
-          <div class="hero-visual-badge">
-            <span class="badge-year">2026</span>
-            <span class="badge-text">Excelência em<br>Estética</span>
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="hero-scroll-indicator">
       <div class="scroll-mouse">
         <div class="scroll-dot"></div>
@@ -186,82 +125,45 @@
   <!-- About Section -->
   <section id="about" class="section about">
     <div class="container">
-      <div class="about-layout">
-        <div class="about-visual" data-reveal>
+      <div class="about-top" data-reveal>
+        <div class="about-visual">
           <div class="about-card-art">
-            <!-- Clinic interior illustration -->
-            <svg viewBox="0 0 500 620" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- Room -->
-              <rect x="40" y="60" width="420" height="500" rx="20" fill="#F9F3EC"/>
-              <!-- Window -->
-              <rect x="160" y="90" width="180" height="200" rx="8" fill="#EBD9BF" opacity="0.6"/>
-              <line x1="250" y1="90" x2="250" y2="290" stroke="#D4B8AA" stroke-width="1"/>
-              <line x1="160" y1="190" x2="340" y2="190" stroke="#D4B8AA" stroke-width="1"/>
-              <!-- Light from window -->
-              <ellipse cx="250" cy="350" rx="140" ry="60" fill="#F2CF8C" opacity="0.08"/>
-              <!-- Plant -->
-              <rect x="70" y="340" width="40" height="50" rx="4" fill="#BC9B8B" opacity="0.3"/>
-              <circle cx="90" cy="320" r="30" fill="#A07E6E" opacity="0.2"/>
-              <circle cx="75" cy="310" r="20" fill="#BC9B8B" opacity="0.15"/>
-              <circle cx="105" cy="315" r="18" fill="#A07E6E" opacity="0.15"/>
-              <!-- Treatment chair -->
-              <path d="M200 380C200 360 210 340 250 340C290 340 300 360 300 380L310 480H190L200 380Z" fill="#D4B8AA" opacity="0.4"/>
-              <ellipse cx="250" cy="340" rx="55" ry="15" fill="#BC9B8B" opacity="0.3"/>
-              <!-- Side table -->
-              <rect x="340" y="360" width="60" height="6" rx="3" fill="#A07E6E" opacity="0.3"/>
-              <rect x="367" y="366" width="6" height="50" rx="3" fill="#A07E6E" opacity="0.25"/>
-              <!-- Bottles on table -->
-              <rect x="348" y="340" width="14" height="20" rx="4" fill="#BC9B8B" opacity="0.4"/>
-              <rect x="366" y="345" width="10" height="15" rx="3" fill="#F2CF8C" opacity="0.3"/>
-              <rect x="382" y="342" width="12" height="18" rx="4" fill="#EBD9BF" opacity="0.5"/>
-              <!-- Decorative circles -->
-              <circle cx="420" cy="120" r="25" fill="#F2CF8C" opacity="0.12"/>
-              <circle cx="80" cy="130" r="15" fill="#BC9B8B" opacity="0.1"/>
-              <!-- Floor reflection -->
-              <rect x="40" y="500" width="420" height="60" rx="0" fill="url(#floorGrad)" opacity="0.3"/>
-              <defs>
-                <linearGradient id="floorGrad" x1="250" y1="500" x2="250" y2="560">
-                  <stop offset="0%" stop-color="#D4B8AA"/>
-                  <stop offset="100%" stop-color="#F9F3EC" stop-opacity="0"/>
-                </linearGradient>
-              </defs>
-            </svg>
-            <div class="about-art-label">Nosso Espaço</div>
+            <img src="../Clínica Aline/Marca dágua/Onde a ciência.png" alt="Onde a ciência encontra a arte do cuidar" class="about-img">
           </div>
         </div>
-        <div class="about-content" data-reveal>
+        <div class="about-text">
           <span class="section-tag">Quem Somos</span>
           <h2>Onde a ciência encontra a<br><em>arte do cuidar</em></h2>
           <p class="about-lead">A Harmonie Santé é referência em medicina integrada e estética avançada, oferecendo uma experiência completa de cuidado com saúde e beleza.</p>
           <p>Nossa filosofia une os mais recentes avanços da medicina estética com uma abordagem holística. Cada protocolo é meticulosamente desenhado para respeitar a individualidade, promovendo resultados que realçam — nunca transformam — a sua beleza natural.</p>
-          <div class="about-features">
-            <div class="about-feat">
-              <div class="feat-icon">
-                <svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="1"/><path d="M16 8v16M8 16h16" stroke="currentColor" stroke-width="1"/></svg>
-              </div>
-              <div>
-                <strong>Medicina Integrativa</strong>
-                <span>Saúde e beleza em equilíbrio</span>
-              </div>
-            </div>
-            <div class="about-feat">
-              <div class="feat-icon">
-                <svg viewBox="0 0 32 32" fill="none"><path d="M16 4L20 12L28 14L22 20L24 28L16 24L8 28L10 20L4 14L12 12Z" stroke="currentColor" stroke-width="1" fill="none"/></svg>
-              </div>
-              <div>
-                <strong>Protocolos Exclusivos</strong>
-                <span>Personalizados para cada paciente</span>
-              </div>
-            </div>
-            <div class="about-feat">
-              <div class="feat-icon">
-                <svg viewBox="0 0 32 32" fill="none"><rect x="4" y="4" width="24" height="24" rx="12" stroke="currentColor" stroke-width="1"/><circle cx="16" cy="16" r="6" stroke="currentColor" stroke-width="1"/></svg>
-              </div>
-              <div>
-                <strong>Tecnologia Avançada</strong>
-                <span>Equipamentos de última geração</span>
-              </div>
-            </div>
+        </div>
+      </div>
+      <div class="about-features" data-reveal>
+        <div class="about-feat">
+          <div class="feat-icon">
+            <svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="1"/><path d="M16 8v16M8 16h16" stroke="currentColor" stroke-width="1"/></svg>
+          </div>
+          <div>
+            <strong>Medicina Integrativa</strong>
+            <span>Saúde e beleza em equilíbrio</span>
+          </div>
+        </div>
+        <div class="about-feat">
+          <div class="feat-icon">
+            <svg viewBox="0 0 32 32" fill="none"><path d="M16 4L20 12L28 14L22 20L24 28L16 24L8 28L10 20L4 14L12 12Z" stroke="currentColor" stroke-width="1" fill="none"/></svg>
+          </div>
+          <div>
+            <strong>Protocolos Exclusivos</strong>
+            <span>Personalizados para cada paciente</span>
+          </div>
+        </div>
+        <div class="about-feat">
+          <div class="feat-icon">
+            <svg viewBox="0 0 32 32" fill="none"><rect x="4" y="4" width="24" height="24" rx="12" stroke="currentColor" stroke-width="1"/><circle cx="16" cy="16" r="6" stroke="currentColor" stroke-width="1"/></svg>
+          </div>
+          <div>
+            <strong>Tecnologia Avançada</strong>
+            <span>Equipamentos de última geração</span>
           </div>
         </div>
       </div>
@@ -283,16 +185,26 @@
             <h3>Harmonização Facial</h3>
             <p>Procedimentos minimamente invasivos que restauram o equilíbrio e a harmonia dos contornos faciais, realçando sua beleza natural com resultados sutis e elegantes.</p>
           </div>
-          <div class="service-art">
-            <svg viewBox="0 0 200 200" fill="none">
-              <circle cx="100" cy="100" r="80" fill="#EBD9BF" opacity="0.3"/>
-              <ellipse cx="100" cy="95" rx="50" ry="65" fill="#D4B8AA" opacity="0.2"/>
-              <path d="M75 85C80 82 90 80 100 80C110 80 120 82 125 85" stroke="#BC9B8B" stroke-width="1" opacity="0.6"/>
-              <circle cx="85" cy="82" r="4" fill="#A07E6E" opacity="0.3"/>
-              <circle cx="115" cy="82" r="4" fill="#A07E6E" opacity="0.3"/>
-              <path d="M95 100V115" stroke="#BC9B8B" stroke-width="0.8" opacity="0.4"/>
-              <path d="M88 125C93 121 107 121 112 125" stroke="#BC9B8B" stroke-width="1" opacity="0.5"/>
-              <circle cx="155" cy="50" r="15" fill="#F2CF8C" opacity="0.2"/>
+          <div class="service-icon-wrap">
+            <svg class="service-icon" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Face oval -->
+              <path d="M40 8C28 8 18 20 18 34C18 40 17 46 18 52C19 60 24 66 32 70C36 72 38 74 40 75C42 74 44 72 48 70C56 66 61 60 62 52C63 46 62 40 62 34C62 20 52 8 40 8Z" stroke="#BC9B8B" stroke-width="1.5" fill="none"/>
+              <!-- Symmetry line -->
+              <line x1="40" y1="14" x2="40" y2="70" stroke="#D4B8AA" stroke-width="0.6" stroke-dasharray="3 3"/>
+              <!-- Horizontal proportion lines -->
+              <line x1="22" y1="32" x2="58" y2="32" stroke="#D4B8AA" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.5"/>
+              <line x1="24" y1="44" x2="56" y2="44" stroke="#D4B8AA" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.5"/>
+              <line x1="26" y1="56" x2="54" y2="56" stroke="#D4B8AA" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.5"/>
+              <!-- Golden ratio points -->
+              <circle cx="32" cy="32" r="2.5" fill="#F2CF8C" opacity="0.7"/>
+              <circle cx="48" cy="32" r="2.5" fill="#F2CF8C" opacity="0.7"/>
+              <circle cx="40" cy="44" r="2" fill="#F2CF8C" opacity="0.5"/>
+              <circle cx="40" cy="56" r="2" fill="#F2CF8C" opacity="0.5"/>
+              <!-- Contour enhancement arrows -->
+              <path d="M16 34L12 34" stroke="#BC9B8B" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+              <path d="M64 34L68 34" stroke="#BC9B8B" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+              <path d="M22 62L18 65" stroke="#BC9B8B" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+              <path d="M58 62L62 65" stroke="#BC9B8B" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
             </svg>
           </div>
           <a href="#contact" class="service-cta">Saiba mais</a>
@@ -304,14 +216,28 @@
             <h3>Bioestimuladores de Colágeno</h3>
             <p>Estimulam a produção natural de colágeno, promovendo firmeza, sustentação e rejuvenescimento progressivo da pele com efeitos duradouros.</p>
           </div>
-          <div class="service-art">
-            <svg viewBox="0 0 200 200" fill="none">
-              <circle cx="100" cy="100" r="80" fill="#EBD9BF" opacity="0.2"/>
-              <path d="M60 100C70 80 85 70 100 65C115 70 130 80 140 100C130 120 115 130 100 135C85 130 70 120 60 100Z" fill="#D4B8AA" opacity="0.25"/>
-              <circle cx="100" cy="100" r="20" stroke="#BC9B8B" stroke-width="0.8" stroke-dasharray="3 3" opacity="0.5"/>
-              <circle cx="100" cy="100" r="35" stroke="#BC9B8B" stroke-width="0.5" stroke-dasharray="4 4" opacity="0.3"/>
-              <circle cx="100" cy="100" r="4" fill="#F2CF8C" opacity="0.6"/>
-              <path d="M100 65L100 135M65 100L135 100" stroke="#A07E6E" stroke-width="0.5" opacity="0.25"/>
+          <div class="service-icon-wrap">
+            <svg class="service-icon" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Cell membrane -->
+              <circle cx="40" cy="40" r="30" stroke="#BC9B8B" stroke-width="1.2" fill="none"/>
+              <circle cx="40" cy="40" r="22" stroke="#D4B8AA" stroke-width="0.8" stroke-dasharray="4 3" fill="none"/>
+              <!-- Collagen fibers radiating -->
+              <path d="M40 10V18" stroke="#BC9B8B" stroke-width="1.2" stroke-linecap="round"/>
+              <path d="M40 62V70" stroke="#BC9B8B" stroke-width="1.2" stroke-linecap="round"/>
+              <path d="M10 40H18" stroke="#BC9B8B" stroke-width="1.2" stroke-linecap="round"/>
+              <path d="M62 40H70" stroke="#BC9B8B" stroke-width="1.2" stroke-linecap="round"/>
+              <path d="M18.8 18.8L24.4 24.4" stroke="#D4B8AA" stroke-width="1" stroke-linecap="round"/>
+              <path d="M55.6 55.6L61.2 61.2" stroke="#D4B8AA" stroke-width="1" stroke-linecap="round"/>
+              <path d="M18.8 61.2L24.4 55.6" stroke="#D4B8AA" stroke-width="1" stroke-linecap="round"/>
+              <path d="M55.6 24.4L61.2 18.8" stroke="#D4B8AA" stroke-width="1" stroke-linecap="round"/>
+              <!-- Core nucleus -->
+              <circle cx="40" cy="40" r="8" fill="#EBD9BF" opacity="0.5"/>
+              <circle cx="40" cy="40" r="4" fill="#F2CF8C" opacity="0.6"/>
+              <!-- Growth particles -->
+              <circle cx="28" cy="24" r="1.5" fill="#F2CF8C" opacity="0.5"/>
+              <circle cx="54" cy="30" r="1.5" fill="#F2CF8C" opacity="0.4"/>
+              <circle cx="50" cy="56" r="1.5" fill="#F2CF8C" opacity="0.5"/>
+              <circle cx="26" cy="52" r="1.5" fill="#F2CF8C" opacity="0.4"/>
             </svg>
           </div>
           <a href="#contact" class="service-cta">Saiba mais</a>
@@ -323,15 +249,23 @@
             <h3>Skincare Avançado</h3>
             <p>Protocolos de tratamento facial com tecnologias de ponta para rejuvenescimento, hidratação profunda, luminosidade e textura impecável.</p>
           </div>
-          <div class="service-art">
-            <svg viewBox="0 0 200 200" fill="none">
-              <rect x="70" y="40" width="60" height="120" rx="30" fill="#EBD9BF" opacity="0.3"/>
-              <rect x="78" y="55" width="44" height="80" rx="22" fill="#D4B8AA" opacity="0.2"/>
-              <ellipse cx="100" cy="38" rx="16" ry="8" fill="#BC9B8B" opacity="0.3"/>
-              <circle cx="100" cy="90" r="8" fill="#F2CF8C" opacity="0.2"/>
-              <path d="M50 170C70 165 130 165 150 170" stroke="#BC9B8B" stroke-width="0.6" opacity="0.3"/>
-              <circle cx="50" cy="60" r="10" fill="#F2CF8C" opacity="0.15"/>
-              <circle cx="155" cy="140" r="12" fill="#D4B8AA" opacity="0.15"/>
+          <div class="service-icon-wrap">
+            <svg class="service-icon" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Serum bottle -->
+              <rect x="28" y="30" width="24" height="36" rx="6" stroke="#BC9B8B" stroke-width="1.3" fill="none"/>
+              <!-- Bottle neck -->
+              <rect x="34" y="20" width="12" height="12" rx="2" stroke="#BC9B8B" stroke-width="1.2" fill="none"/>
+              <!-- Dropper cap -->
+              <path d="M36 20V16C36 14 38 12 40 12C42 12 44 14 44 16V20" stroke="#BC9B8B" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+              <!-- Liquid level -->
+              <path d="M29 48C29 48 34 44 40 46C46 48 51 44 51 44V60C51 63.3 48.3 66 45 66H35C31.7 66 29 63.3 29 60V48Z" fill="#EBD9BF" opacity="0.4"/>
+              <!-- Droplet falling -->
+              <path d="M40 70C40 70 36 74 36 76C36 78.2 37.8 80 40 80C42.2 80 44 78.2 44 76C44 74 40 70 40 70Z" fill="#F2CF8C" opacity="0.5"/>
+              <!-- Glow sparkles -->
+              <path d="M18 28L20 24L22 28L20 32Z" fill="#F2CF8C" opacity="0.4"/>
+              <path d="M58 36L60 32L62 36L60 40Z" fill="#F2CF8C" opacity="0.35"/>
+              <circle cx="62" cy="22" r="1.5" fill="#F2CF8C" opacity="0.3"/>
+              <circle cx="16" cy="44" r="1.5" fill="#D4B8AA" opacity="0.3"/>
             </svg>
           </div>
           <a href="#contact" class="service-cta">Saiba mais</a>
@@ -343,15 +277,27 @@
             <h3>Toxina Botulínica</h3>
             <p>Aplicação precisa para suavizar linhas de expressão e prevenir o envelhecimento, mantendo a expressividade natural do rosto.</p>
           </div>
-          <div class="service-art">
-            <svg viewBox="0 0 200 200" fill="none">
-              <circle cx="100" cy="100" r="70" fill="#EBD9BF" opacity="0.2"/>
-              <path d="M60 90C75 70 125 70 140 90" stroke="#BC9B8B" stroke-width="1" opacity="0.4"/>
-              <path d="M60 95C75 115 125 115 140 95" stroke="#BC9B8B" stroke-width="0.6" opacity="0.25"/>
-              <line x1="100" y1="60" x2="100" y2="40" stroke="#F2CF8C" stroke-width="1" opacity="0.4"/>
-              <line x1="70" y1="70" x2="58" y2="55" stroke="#F2CF8C" stroke-width="0.8" opacity="0.3"/>
-              <line x1="130" y1="70" x2="142" y2="55" stroke="#F2CF8C" stroke-width="0.8" opacity="0.3"/>
-              <circle cx="100" cy="92" r="3" fill="#A07E6E" opacity="0.4"/>
+          <div class="service-icon-wrap">
+            <svg class="service-icon" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Forehead area -->
+              <path d="M20 38C20 24 28 14 40 14C52 14 60 24 60 38" stroke="#BC9B8B" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+              <!-- Expression lines being smoothed -->
+              <path d="M28 26C32 24 36 24 40 26" stroke="#D4B8AA" stroke-width="0.8" opacity="0.6" stroke-linecap="round"/>
+              <path d="M40 26C44 24 48 24 52 26" stroke="#D4B8AA" stroke-width="0.8" opacity="0.6" stroke-linecap="round"/>
+              <path d="M30 32C34 30 38 30 42 32" stroke="#D4B8AA" stroke-width="0.8" opacity="0.4" stroke-linecap="round"/>
+              <path d="M38 32C42 30 46 30 50 32" stroke="#D4B8AA" stroke-width="0.8" opacity="0.4" stroke-linecap="round"/>
+              <!-- Precision syringe -->
+              <line x1="40" y1="44" x2="40" y2="62" stroke="#BC9B8B" stroke-width="1.5" stroke-linecap="round"/>
+              <rect x="36" y="58" width="8" height="12" rx="1.5" stroke="#BC9B8B" stroke-width="1.2" fill="none"/>
+              <!-- Syringe tip -->
+              <path d="M40 44L38.5 48H41.5L40 44Z" fill="#BC9B8B" opacity="0.6"/>
+              <!-- Application points -->
+              <circle cx="30" cy="28" r="2.5" stroke="#F2CF8C" stroke-width="1" fill="none" opacity="0.7"/>
+              <circle cx="40" cy="22" r="2.5" stroke="#F2CF8C" stroke-width="1" fill="none" opacity="0.7"/>
+              <circle cx="50" cy="28" r="2.5" stroke="#F2CF8C" stroke-width="1" fill="none" opacity="0.7"/>
+              <!-- Smooth effect rays -->
+              <path d="M24 20L20 16" stroke="#F2CF8C" stroke-width="0.7" opacity="0.3" stroke-linecap="round"/>
+              <path d="M56 20L60 16" stroke="#F2CF8C" stroke-width="0.7" opacity="0.3" stroke-linecap="round"/>
             </svg>
           </div>
           <a href="#contact" class="service-cta">Saiba mais</a>
@@ -363,14 +309,32 @@
             <h3>Preenchimento com Ácido Hialurônico</h3>
             <p>Técnicas refinadas para lábios, sulcos e contornos — volumização delicada e natural que respeita a sua expressão.</p>
           </div>
-          <div class="service-art">
-            <svg viewBox="0 0 200 200" fill="none">
-              <ellipse cx="100" cy="100" rx="60" ry="35" fill="#EBD9BF" opacity="0.3"/>
-              <path d="M55 95C70 82 90 78 100 80C110 78 130 82 145 95" stroke="#BC9B8B" stroke-width="1.2" opacity="0.5"/>
-              <path d="M55 95C70 108 90 112 100 110C110 112 130 108 145 95" stroke="#BC9B8B" stroke-width="1" opacity="0.4"/>
-              <path d="M75 95C85 90 95 88 100 89C105 88 115 90 125 95" stroke="#D4B8AA" stroke-width="0.8" opacity="0.4"/>
-              <circle cx="45" cy="70" r="8" fill="#F2CF8C" opacity="0.2"/>
-              <circle cx="160" cy="125" r="6" fill="#F2CF8C" opacity="0.15"/>
+          <div class="service-icon-wrap">
+            <svg class="service-icon" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Lip outline upper -->
+              <path d="M20 42C24 34 32 30 40 32C48 30 56 34 60 42" stroke="#BC9B8B" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+              <!-- Cupid's bow -->
+              <path d="M32 36C35 32 37 31 40 32C43 31 45 32 48 36" stroke="#BC9B8B" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.7"/>
+              <!-- Lip outline lower -->
+              <path d="M20 42C24 52 32 56 40 54C48 56 56 52 60 42" stroke="#BC9B8B" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+              <!-- Volume fill -->
+              <path d="M24 42C28 48 34 52 40 50C46 52 52 48 56 42C52 46 46 49 40 48C34 49 28 46 24 42Z" fill="#EBD9BF" opacity="0.4"/>
+              <!-- Injection point -->
+              <circle cx="40" cy="44" r="2" fill="#F2CF8C" opacity="0.6"/>
+              <!-- Volume enhancement indicators -->
+              <path d="M16 42L12 42" stroke="#D4B8AA" stroke-width="0.8" stroke-linecap="round" opacity="0.5"/>
+              <path d="M68 42L64 42" stroke="#D4B8AA" stroke-width="0.8" stroke-linecap="round" opacity="0.5"/>
+              <path d="M40 58L40 62" stroke="#D4B8AA" stroke-width="0.8" stroke-linecap="round" opacity="0.5"/>
+              <!-- Sparkle accents -->
+              <path d="M18 30L20 26L22 30L20 34Z" fill="#F2CF8C" opacity="0.35"/>
+              <path d="M60 28L62 24L64 28L62 32Z" fill="#F2CF8C" opacity="0.3"/>
+              <!-- Molecule dots (hyaluronic acid) -->
+              <circle cx="24" cy="22" r="1.2" fill="#D4B8AA" opacity="0.4"/>
+              <circle cx="28" cy="20" r="1.2" fill="#D4B8AA" opacity="0.3"/>
+              <line x1="24" y1="22" x2="28" y2="20" stroke="#D4B8AA" stroke-width="0.5" opacity="0.3"/>
+              <circle cx="56" cy="24" r="1.2" fill="#D4B8AA" opacity="0.4"/>
+              <circle cx="52" cy="22" r="1.2" fill="#D4B8AA" opacity="0.3"/>
+              <line x1="56" y1="24" x2="52" y2="22" stroke="#D4B8AA" stroke-width="0.5" opacity="0.3"/>
             </svg>
           </div>
           <a href="#contact" class="service-cta">Saiba mais</a>
@@ -382,14 +346,27 @@
             <h3>Protocolos Corporais</h3>
             <p>Tratamentos avançados para remodelação corporal, redução de medidas, melhora da flacidez e qualidade da pele do corpo.</p>
           </div>
-          <div class="service-art">
-            <svg viewBox="0 0 200 200" fill="none">
-              <path d="M90 40C85 60 80 90 82 120C84 150 88 170 95 180L105 180C112 170 116 150 118 120C120 90 115 60 110 40" fill="#EBD9BF" opacity="0.25"/>
-              <path d="M90 40C85 60 80 90 82 120C84 150 88 170 95 180" stroke="#BC9B8B" stroke-width="0.8" opacity="0.4"/>
-              <path d="M110 40C115 60 120 90 118 120C116 150 112 170 105 180" stroke="#BC9B8B" stroke-width="0.8" opacity="0.4"/>
-              <ellipse cx="100" cy="100" rx="30" ry="50" stroke="#D4B8AA" stroke-width="0.5" stroke-dasharray="4 3" opacity="0.3"/>
-              <circle cx="140" cy="60" r="12" fill="#F2CF8C" opacity="0.15"/>
-              <circle cx="60" cy="150" r="10" fill="#D4B8AA" opacity="0.15"/>
+          <div class="service-icon-wrap">
+            <svg class="service-icon" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Body silhouette -->
+              <path d="M36 12C36 12 34 16 34 20C34 24 36 26 36 26L32 36L30 50L32 66L36 72H38L40 56L42 72H44L48 66L50 50L48 36L44 26C44 26 46 24 46 20C46 16 44 12 44 12" stroke="#BC9B8B" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <!-- Head -->
+              <circle cx="40" cy="10" r="5" stroke="#BC9B8B" stroke-width="1.2" fill="none"/>
+              <!-- Treatment zones -->
+              <ellipse cx="40" cy="36" rx="10" ry="6" stroke="#D4B8AA" stroke-width="0.8" stroke-dasharray="3 2" fill="none" opacity="0.6"/>
+              <ellipse cx="40" cy="50" rx="8" ry="5" stroke="#D4B8AA" stroke-width="0.8" stroke-dasharray="3 2" fill="none" opacity="0.5"/>
+              <!-- Contouring arrows -->
+              <path d="M22 34L26 36" stroke="#F2CF8C" stroke-width="0.9" stroke-linecap="round" opacity="0.5"/>
+              <path d="M22 38L26 36" stroke="#F2CF8C" stroke-width="0.9" stroke-linecap="round" opacity="0.5"/>
+              <path d="M58 34L54 36" stroke="#F2CF8C" stroke-width="0.9" stroke-linecap="round" opacity="0.5"/>
+              <path d="M58 38L54 36" stroke="#F2CF8C" stroke-width="0.9" stroke-linecap="round" opacity="0.5"/>
+              <path d="M22 48L26 50" stroke="#F2CF8C" stroke-width="0.9" stroke-linecap="round" opacity="0.4"/>
+              <path d="M22 52L26 50" stroke="#F2CF8C" stroke-width="0.9" stroke-linecap="round" opacity="0.4"/>
+              <path d="M58 48L54 50" stroke="#F2CF8C" stroke-width="0.9" stroke-linecap="round" opacity="0.4"/>
+              <path d="M58 52L54 50" stroke="#F2CF8C" stroke-width="0.9" stroke-linecap="round" opacity="0.4"/>
+              <!-- Energy sparkles -->
+              <circle cx="18" cy="26" r="1.5" fill="#F2CF8C" opacity="0.35"/>
+              <circle cx="62" cy="44" r="1.5" fill="#F2CF8C" opacity="0.3"/>
             </svg>
           </div>
           <a href="#contact" class="service-cta">Saiba mais</a>
@@ -647,7 +624,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="footer-logo">
-            <span class="logo-monogram">HS</span>
+            <img src="../Clínica Aline/Marca dágua/Curva (2).png" alt="Harmonie Santé" class="logo-icon footer-logo-icon">
             <span class="logo-divider"></span>
             <span class="logo-text">Harmonie Santé</span>
           </div>

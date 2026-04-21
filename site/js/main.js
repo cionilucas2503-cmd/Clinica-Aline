@@ -12,13 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Header scroll
   const header = document.getElementById('header');
-  const onScroll = () => {
-    header.classList.toggle('scrolled', window.scrollY > 60);
-  };
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
 
   // Mobile menu
   const navToggle = document.getElementById('navToggle');
