@@ -110,11 +110,11 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const data = Object.fromEntries(new FormData(contactForm).entries());
 
-      const message = `Olá! Gostaria de agendar uma consulta.\n\n` +
+      const message = `Olá! Gostaria de agendar uma consulta na Harmonie Santé.\n\n` +
         `*Nome:* ${data.name}\n` +
         `*E-mail:* ${data.email}\n` +
         `*Telefone:* ${data.phone}\n` +
-        `*Tratamento:* ${data.service}\n` +
+        `*Área de interesse:* ${data.service}\n` +
         `*Mensagem:* ${data.message || 'Sem mensagem adicional'}`;
 
       const whatsappUrl = `https://wa.me/5500000000000?text=${encodeURIComponent(message)}`;
