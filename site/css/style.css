@@ -640,6 +640,109 @@ h2 em, h1 em {
   color: var(--text-light);
 }
 
+/* === Experiência Harmonie === */
+.experiencia {
+  background: var(--cream);
+}
+
+.experiencia-intro {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  line-height: 1.8;
+  max-width: 640px;
+  margin: 0.8rem auto 0;
+}
+
+.exp-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.exp-card {
+  background: var(--white);
+  padding: 2rem 1.8rem;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  transition: all 0.4s var(--ease);
+  position: relative;
+  overflow: hidden;
+}
+
+.exp-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-light), var(--accent));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s var(--ease);
+}
+
+.exp-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(44, 34, 32, 0.06);
+  border-color: var(--primary-light);
+}
+
+.exp-card:hover::before {
+  transform: scaleX(1);
+}
+
+.exp-card-highlight {
+  background: var(--dark);
+  border-color: transparent;
+}
+
+.exp-card-highlight h4 {
+  color: var(--white);
+}
+
+.exp-card-highlight p {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.exp-card-highlight:hover {
+  border-color: var(--accent);
+}
+
+.exp-card-highlight::before {
+  background: linear-gradient(90deg, var(--accent), var(--primary));
+}
+
+.exp-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1.2rem;
+}
+
+.exp-card h4 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--dark);
+  margin-bottom: 0.6rem;
+}
+
+.exp-card p {
+  font-size: 0.82rem;
+  color: var(--text-light);
+  line-height: 1.75;
+}
+
+.exp-closing {
+  text-align: center;
+  font-family: var(--heading);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--primary);
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
 /* === Services === */
 .services {
   background: var(--off-white);
@@ -1328,6 +1431,22 @@ h2 em, h1 em {
   .about-feat strong { font-size: 0.78rem; }
   .about-feat span { font-size: 0.7rem; }
   .feat-icon { width: 28px; height: 28px; }
+
+  /* Experiência mobile */
+  .exp-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .exp-card {
+    padding: 1.5rem 1.3rem;
+  }
+
+  .exp-icon { width: 40px; height: 40px; margin-bottom: 0.8rem; }
+  .exp-card h4 { font-size: 0.95rem; }
+  .exp-card p { font-size: 0.78rem; }
+  .experiencia-intro { font-size: 0.85rem; }
+  .exp-closing { font-size: 0.95rem; margin-top: 2rem; }
 
   /* Services mobile */
   .section-header { margin-bottom: 2.5rem; }
