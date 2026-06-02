@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
         `*Área de interesse:* ${data.service}\n` +
         `*Mensagem:* ${data.message || 'Sem mensagem adicional'}`;
 
-      const whatsappUrl = `https://wa.me/5500000000000?text=${encodeURIComponent(message)}`;
+      const whatsappUrl = `https://wa.me/5511950764000?text=${encodeURIComponent(message)}`;
 
       const btn = contactForm.querySelector('button[type="submit"]');
       const original = btn.innerHTML;
