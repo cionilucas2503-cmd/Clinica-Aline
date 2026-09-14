@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const data = Object.fromEntries(new FormData(contactForm).entries());
 
-      const message = `Olá! Gostaria de agendar uma consulta na Harmonie Santé.\n\n` +
+      const message = `Olá! Vim pelo site e gostaria de agendar uma consulta na Harmonie Santé.\n\n` +
         `*Nome:* ${data.name}\n` +
         `*E-mail:* ${data.email}\n` +
         `*Telefone:* ${data.phone}\n` +

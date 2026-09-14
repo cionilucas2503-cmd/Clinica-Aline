@@ -587,6 +587,15 @@ h2 em, h1 em {
   margin-bottom: 1.5rem;
 }
 
+.about-text > p.about-crm {
+  margin: -0.75rem 0 1.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
 .about-lead {
   font-size: 1.05rem;
   color: var(--text);
