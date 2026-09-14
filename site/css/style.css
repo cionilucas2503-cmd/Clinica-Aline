@@ -340,6 +340,7 @@ h2 em, h1 em {
   justify-content: center;
   position: relative;
   overflow: hidden;
+  background: #2c2220;
 }
 
 .hero-bg-img {
@@ -348,7 +349,10 @@ h2 em, h1 em {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 70% 32%;
+  object-position: center;
+  opacity: 0.6;
+  filter: blur(3px);
+  transform: scale(1.05);
 }
 
 .hero-overlay {
@@ -1346,10 +1350,12 @@ h2 em, h1 em {
     align-items: flex-end;
   }
 
-  /* Sobe a foto para o logo HS ficar próximo ao topo */
+  /* Foto da Dra. já recortada: logo HS próximo ao topo */
   .hero-bg-img {
-    top: -18%;
-    height: 125%;
+    object-position: 70% top;
+    opacity: 1;
+    filter: none;
+    transform: none;
   }
 
   .hero-overlay {
