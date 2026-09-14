@@ -57,11 +57,29 @@
 
   <!-- Hero Section -->
   <section id="home" class="hero">
-    <picture>
-      <source media="(max-width: 768px)" srcset="../Clínica Aline/Hero Dra Aline Mobile.jpg">
-      <img src="../Clínica Aline/Marca dágua/Onde a ciência.png" alt="" class="hero-bg-img" aria-hidden="true">
-    </picture>
-    <div class="hero-overlay"></div>
+    <!-- Fundo digital: gradiente, luzes suaves, linhas douradas e monograma -->
+    <div class="hero-bg" aria-hidden="true">
+      <div class="hero-orb hero-orb-1"></div>
+      <div class="hero-orb hero-orb-2"></div>
+      <div class="hero-orb hero-orb-3"></div>
+      <svg class="hero-lines" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" fill="none">
+        <circle cx="1080" cy="450" r="300" stroke="url(#heroGold)" stroke-width="1"/>
+        <circle cx="1080" cy="450" r="380" stroke="url(#heroGold)" stroke-width="0.6" opacity="0.6"/>
+        <circle cx="1080" cy="450" r="470" stroke="url(#heroGold)" stroke-width="0.4" opacity="0.35"/>
+        <path d="M-40 720C260 600 520 820 820 700S1300 520 1480 600" stroke="url(#heroGold)" stroke-width="0.8" opacity="0.5"/>
+        <path d="M-40 780C300 660 560 880 860 760S1320 590 1480 660" stroke="url(#heroGold)" stroke-width="0.5" opacity="0.3"/>
+        <defs>
+          <linearGradient id="heroGold" x1="0" y1="0" x2="1440" y2="900" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#F2CF8C" stop-opacity="0"/>
+            <stop offset="0.5" stop-color="#E9C987"/>
+            <stop offset="1" stop-color="#FFF6E6" stop-opacity="0.2"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <img src="../Clínica Aline/Marca dágua/Curva (2).png" alt="" class="hero-monogram">
+      <div class="hero-sheen"></div>
+      <div class="hero-grain"></div>
+    </div>
 
     <div class="hero-content" data-reveal>
       <div class="hero-tag">
@@ -70,8 +88,7 @@
       </div>
       <h1>
         Onde saúde, estética<br>
-        e ciência se<br>
-        <em>encontram</em>
+        e ciência se <em>encontram</em>
       </h1>
       <p class="hero-desc">Um cuidado conduzido com critério, precisão e responsabilidade médica. Onde a beleza nasce da harmonia entre saúde, bem-estar e autoestima.</p>
       <div class="hero-btns">
@@ -81,6 +98,11 @@
         </a>
         <a href="#about" class="btn btn-ghost">Conheça a Clínica</a>
       </div>
+      <ul class="hero-trust">
+        <li><strong>Dra. Aline Rodrigues</strong><span>CRM-SP 250050</span></li>
+        <li><strong>Medicina integrada</strong><span>Saúde, estética e bem-estar</span></li>
+        <li><strong>Hora marcada</strong><span>Atendimento individualizado</span></li>
+      </ul>
     </div>
 
     <div class="hero-scroll-indicator">
@@ -111,8 +133,12 @@
     <div class="container">
       <div class="about-top" data-reveal>
         <div class="about-visual">
-          <div class="about-card-art">
-            <img src="../Clínica Aline/Marca dágua/Onde a ciência.png" alt="Harmonie Santé — onde a ciência encontra a arte do cuidar" class="about-img">
+          <div class="about-card-art about-card-portrait">
+            <img src="../Clínica Aline/Hero Dra Aline.jpg" alt="Dra. Aline Rodrigues na recepção da Harmonie Santé" class="about-img">
+          </div>
+          <div class="about-badge">
+            <strong>Dra. Aline Rodrigues</strong>
+            <span>Fundadora &middot; CRM-SP 250050</span>
           </div>
         </div>
         <div class="about-text">
