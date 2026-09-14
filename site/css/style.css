@@ -1346,6 +1346,12 @@ h2 em, h1 em {
     align-items: flex-end;
   }
 
+  /* Sobe a foto para o logo HS ficar próximo ao topo */
+  .hero-bg-img {
+    top: -18%;
+    height: 125%;
+  }
+
   .hero-overlay {
     background: linear-gradient(
       180deg,
