@@ -706,12 +706,12 @@ h2 em, h1 em {
   border-color: transparent;
 }
 
-.exp-card-highlight h4 {
+.exp-card.exp-card-highlight h4 {
   color: var(--white);
 }
 
-.exp-card-highlight p {
-  color: rgba(255, 255, 255, 0.55);
+.exp-card.exp-card-highlight p {
+  color: rgba(255, 255, 255, 0.72);
 }
 
 .exp-card-highlight:hover {
