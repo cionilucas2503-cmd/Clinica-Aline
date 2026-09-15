@@ -14,11 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const header = document.getElementById('header');
 
-  // Header com sombra suave ao rolar
-  const updateHeader = () => header.classList.toggle('scrolled', window.scrollY > 10);
-  updateHeader();
-  window.addEventListener('scroll', updateHeader, { passive: true });
-
   // Mobile menu
   const navToggle = document.getElementById('navToggle');
   const mobileMenu = document.getElementById('mobileMenu');
